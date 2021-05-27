@@ -1,0 +1,142 @@
+.popup-wrap {
+    position: relative;
+}
+
+.popup-inner {
+    width: 354px;
+    height: 100%;
+    padding-bottom: 10px;
+    padding-left: 4px;
+}
+
+.popup {
+    position: absolute;
+    width: 354px;
+    bottom: 20px;
+    left: -67px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    padding: 30px 18px;
+    z-index: 1000;
+}
+
+.popup::after {
+    content: "◢";
+    display: inline-block;
+    position: absolute;
+    left: 50px;
+    bottom: -20px;
+    color: #FFFFFF;
+    font-size: 34px;
+    transform: rotate(45deg);
+    text-shadow: 5px 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.hidden {
+    display: none;
+}
+
+.popup__close {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 10px;
+    right: 10px;
+}
+
+.popup__close::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 0;
+    left: 0;
+    background: #A9A9A9;
+    height: 1px;
+    transform: rotate(45deg);
+    transition: .4s ease;
+}
+
+.popup__close:hover::before {
+    content: '';
+    background: #000;
+    transform: rotate(134deg);
+}
+
+.popup__close::after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 0;
+    left: 0;
+    background: #A9A9A9;
+    height: 1px;
+    transform: rotate(-45deg);
+    transition: .4s ease;
+}
+
+.popup__close:hover::after {
+    content: '';
+    background: #000;
+    transform: rotate(45deg);
+}
+
+.popup__title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.popup-feedback-wrap {
+    padding-right: 10px;
+}
+
+.popup-feedback-wrap::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #E7E7E7;
+    /* margin-top: 16px; */
+    margin-bottom: 6px;
+}
+
+.popup-feedback {
+    list-style: none;
+    color: #8F8F8F;
+    height: 100px;
+    overflow-y: scroll;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.popup-feedback--inner {
+    height: auto;
+    overflow-y: auto;
+}
+
+.popup-feedback__item {
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.popup-feedback__header {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.popup-feedback__username {
+    color: #000;
+    margin-right: 8px;
+}
+
+.popup-feedback::-webkit-scrollbar {
+    width: 3px;
+}
+
+.popup-feedback::-webkit-scrollbar-thumb {
+    background-color: #C4C4C4;
+    border-radius: 2px;
+}

@@ -1,0 +1,4 @@
+import './css/main.css'
+import { mapInit } from './js/ymaps'
+
+window.onload = mapInit()
