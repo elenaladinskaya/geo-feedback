@@ -1,4 +1,4 @@
 import './css/main.css'
-import { mapInit } from './js/ymaps'
+import GeoReview from './js/geoReview.js';
 
-window.onload = mapInit()
+new GeoReview();

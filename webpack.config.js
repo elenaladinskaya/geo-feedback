@@ -52,7 +52,7 @@ module.exports = {
             ignoreOrder: false, // Enable to remove warnings about conflicting order
           }),
         new HtmlPlugin({
-            title: 'GeoFeedback',
+            title: 'Geo Review',
             template: 'index.hbs'
         }),
         new CleanWebpackPlugin(['dist'])

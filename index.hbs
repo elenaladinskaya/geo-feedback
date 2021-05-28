@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   <title>{{htmlWebpackPlugin.options.title}}</title>
 </head>
+
 <body>
-  <div class="container">
-    {{> "./src/templates/geo-content.hbs"}}
-  </div>
+  <div id="map"></div>
+
+  <script type="template" id="addFormTemplate">
+    <div class="review-list"></div>
+    <div class="form" data-role="review-form">
+        <h3 class="form__title">Отзыв:</h3>
+            <input data-role="review-name" type="text" placeholder="Укажите ваше имя" class="form__input">
+            <input data-role="review-place" type="text" placeholder="Укажите место" class="form__input">
+            <textarea data-role="review-text" placeholder="Оставьте отзыв" rows="5" class="form__input form__input--textarea"></textarea>
+        <button data-role="review-add" class="button">Добавить</button>
+        <span class="form-error"></span>
+    </div>
+</script>
 </body>
+
 </html>
