@@ -40,7 +40,7 @@ export default class GeoReview {
     return root;
   }
 
-  async onClick(coords) {
+  onClick(coords) {
     let list = [];
 
     allReviews.forEach(item => {
@@ -53,7 +53,7 @@ export default class GeoReview {
     this.map.openBalloon(coords, form.innerHTML);
   }
 
-  async onDocumentClick(e) {
+  onDocumentClick(e) {
     if (e.target.dataset.role === 'review-add') {
       const reviewForm = document.querySelector('[data-role=review-form]');
       const coords = JSON.parse(reviewForm.dataset.coords);
